@@ -1,6 +1,6 @@
 # JavaFX Weather App
 
-![JavaFX Weather App](images/Screenshot.png)
+![Weather App](images/Screenshot.png)
 
 ## Table of Contents
 
