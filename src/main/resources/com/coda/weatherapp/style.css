@@ -1,0 +1,65 @@
+/* Define styles for the application window */
+.root {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Define styles for labels */
+.label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Define styles for text fields */
+.text-field {
+    -fx-pref-width: 200px;
+    -fx-font-size: 16px;
+    -fx-padding: 5px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+}
+
+/* Define styles for buttons */
+.button {
+    -fx-font-size: 16px;
+    -fx-padding: 5px 10px;
+    -fx-background-color: #336699;
+    -fx-text-fill: white;
+    -fx-border-radius: 3px;
+}
+
+.button:hover {
+    -fx-background-color: #225588;
+}
+
+/* Define styles for the weather display */
+.weather-display {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+}
+
+/* Define styles for error messages */
+.error-message {
+    -fx-font-size: 16px;
+    -fx-text-fill: #FF0000;
+}
+
+/* Define styles for the application title */
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+/* Define styles for the VBox layout */
+.vbox {
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+    -fx-padding: 20px;
+}
