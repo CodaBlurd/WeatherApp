@@ -15,6 +15,8 @@ import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Objects;
+
 public class WeatherAppUI extends Application {
 
     private static final Logger log = LoggerFactory.getLogger(WeatherAppUI.class);
@@ -74,7 +76,7 @@ public class WeatherAppUI extends Application {
 //         Load the CSS file with the correct resource path
 
         try {
-            scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
 
         } catch (NullPointerException e) {
             errorMessage.setText("Cannot fetch resource: " + e.getMessage());
@@ -135,7 +137,3 @@ public class WeatherAppUI extends Application {
 
 
 }
-
-
-//        // Load CSS file
-//        scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
