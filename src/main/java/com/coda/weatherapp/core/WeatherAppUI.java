@@ -1,4 +1,4 @@
-package com.coda.weatherapp;
+package com.coda.weatherapp.core;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -17,6 +17,14 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
 
+/**
+ * This class represents the UI for the Weather App.
+ * <p>
+ * The UI is built using JavaFX.
+ * <p>
+ * See <a href="https://openjfx.io/">https://openjfx.io/</a> for more information.
+ */
+
 public class WeatherAppUI extends Application {
 
     private static final Logger log = LoggerFactory.getLogger(WeatherAppUI.class);
@@ -24,6 +32,14 @@ public class WeatherAppUI extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
+    /**
+     * This method is called by the JavaFX runtime when the application is started.
+     * <p>
+     * The UI components are created and added to the scene.
+     * <p>
+     * The scene is then set on the primary stage and the primary stage is shown.
+     */
 
     @Override
     public void start(Stage primaryStage) {
@@ -63,6 +79,7 @@ public class WeatherAppUI extends Application {
                 errorMessage.setText("Error: Unable to fetch weather data");
             }
         });
+
 
         // Create a VBox to hold the UI components
         VBox vbox = new VBox(10); // 10 pixels spacing
@@ -108,7 +125,7 @@ public class WeatherAppUI extends Application {
     }
 
     // Helper method to display weather data
-    private void displayWeatherData(WeatherInfo weatherInfo, VBox weatherDataVBox) {
+    protected void displayWeatherData(WeatherInfo weatherInfo, VBox weatherDataVBox) {
         // Add labels to display various weather data fields
         weatherDataVBox.getChildren().addAll(
                 new Label("Location: " + weatherInfo.getName()),
@@ -120,10 +137,10 @@ public class WeatherAppUI extends Application {
     }
 
     // Define a Timeline for clearing weather data after 1 minute
-    private void clearWeatherDataAfterDelay(VBox weatherDataVBox) {
+    protected void clearWeatherDataAfterDelay(VBox weatherDataVBox) {
         Timeline timeline = new Timeline(
                 new KeyFrame(
-                        Duration.seconds(5.0), // Adjust the delay duration as needed
+                        Duration.seconds(5.0), // Delay in seconds
                         event -> clearWeatherData(weatherDataVBox)
                 )
         );
@@ -131,7 +148,7 @@ public class WeatherAppUI extends Application {
         timeline.play();
     }
 
-    private void clearWeatherData(VBox weatherDataVBox) {
+    void clearWeatherData(VBox weatherDataVBox) {
         weatherDataVBox.getChildren().clear();
     }
 

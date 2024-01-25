@@ -5,6 +5,6 @@ module com.coda.weatherapp {
     requires com.fasterxml.jackson.databind;
 
 
-    opens com.coda.weatherapp to javafx.fxml;
-    exports com.coda.weatherapp;
+    exports com.coda.weatherapp.core;
+    opens com.coda.weatherapp.core to javafx.fxml;
 }

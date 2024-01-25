@@ -1,8 +1,17 @@
-package com.coda.weatherapp;
+package com.coda.weatherapp.core;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
+
+
+/**
+ * This class represents the response from the OpenWeatherMap API.
+ * <p>
+ * The JSON response is mapped to this class using Jackson.
+ * <p>
+ * See <a href="https://openweathermap.org/current">...</a> for more information.
+ */
 
 public class WeatherInfo {
     private Coord coord;

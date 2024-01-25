@@ -1,4 +1,4 @@
-package com.coda.weatherapp;
+package com.coda.weatherapp.core;
 
 public class WeatherAppConfig {
 
